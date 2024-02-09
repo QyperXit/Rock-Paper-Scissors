@@ -1,0 +1,12 @@
+#root {
+}
+
+.container {
+  max-width: 1336px;
+  margin-inline: auto;
+  /* border: 2px solid red; */
+  position: relative;
+  max-height: 100vh;
+  height: 600px;
+  margin-top: 10em;
+}

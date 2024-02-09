@@ -1,0 +1,96 @@
+main {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+  flex-wrap: wrap;
+}
+
+.group_icons {
+  margin-top: 5em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 80px;
+  justify-content: center; /* Added for centering */
+  background-image: url("/home/qyper/Desktop/Nobara-VsCode/FrontEnd-Mentor/Rock-Paper-Scissors/src/assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hand,
+.rock,
+.scissor {
+  /* border: 1px solid red; */
+  padding: 3em 3.5em;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  background: #fff;
+}
+
+.hand {
+  grid-row: 1;
+  grid-column: 1;
+  box-shadow: inset 0px 10px 1px -1px rgba(0, 0, 0, 0.15);
+}
+
+.hand::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  right: -22px;
+  bottom: -22px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom right,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  z-index: -1;
+}
+
+.scissor {
+  grid-row: 2;
+  grid-column: 2; /* No spanning needed */
+  box-shadow: inset 0px 10px 1px -1px rgba(0, 0, 0, 0.15);
+}
+
+.scissor::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  right: -22px;
+  bottom: -22px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom right,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+  z-index: -1;
+}
+
+.rock {
+  grid-row: 1;
+  grid-column: 3;
+  box-shadow: inset 0px 10px 1px -1px rgba(0, 0, 0, 0.15);
+}
+
+.rock::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  right: -22px;
+  bottom: -22px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom right,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  z-index: -1;
+}

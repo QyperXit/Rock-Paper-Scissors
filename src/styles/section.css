@@ -1,0 +1,78 @@
+section {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.house_pick {
+  display: flex;
+  gap: 10em;
+  /* border: 2px solid red; */
+}
+
+.user_title,
+.computer_title {
+  font-family: var(--font-family);
+  font-size: 1.45rem;
+  letter-spacing: 0.25rem;
+}
+
+.user_choice {
+  margin-top: 4em;
+}
+
+.computer_choice {
+  margin-top: 4em;
+}
+
+.user_icons {
+  transform: translateY(100px);
+  max-width: 160px;
+}
+
+.computer_icons {
+  transform: translate(40px, 100px);
+  max-width: 160px;
+  height: fit-content;
+}
+
+.result_box {
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1.85rem;
+  margin-top: 7em;
+}
+
+.play_again {
+  border: none;
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem 2.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blank {
+  padding: 5em;
+  border-radius: 50%;
+  display: flex;
+  /* position: absolute; */
+  background: hsl(224, 53%, 17%);
+  transform: translate(0px, -7px);
+  /* display: none; */
+}
+
+.rules {
+  /* display: none; */
+  position: absolute;
+  bottom: -75px;
+  right: 0px;
+  background: none;
+  border: 3px solid var(--header-outline);
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 8px;
+}
