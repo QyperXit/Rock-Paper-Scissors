@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/header.css";
 
-const Header = () => {
+const Header = ({ playerScore }) => {
   return (
     <div className="score-container">
       <div className="title_names">
@@ -11,7 +11,7 @@ const Header = () => {
       </div>
       <div className="score_box">
         <h4 className="score_title">SCORE</h4>
-        <div className="score_number">11</div>
+        <div className="score_number">{playerScore}</div>
       </div>
     </div>
   );

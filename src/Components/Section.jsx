@@ -1,5 +1,6 @@
 import React from "react";
 import { iconPaper, iconRock, iconScissors } from "../assets/index.js";
+import "../styles/scoring.css";
 import "../styles/section.css";
 import Blank from "./Blank.jsx";
 import Hand from "./Hand.jsx";

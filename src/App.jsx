@@ -11,6 +11,7 @@ function App() {
   const [showSection, setShowSection] = useState(false);
   const [result, setResult] = useState(null);
   const [computerChoice, setComputerChoice] = useState(""); // Add state for computerChoice
+  const [playerScore, setPlayerScore] = useState(12);
 
   const handleClick = (choice) => {
     setShowMain(false); // Hide the Main component
@@ -29,10 +30,17 @@ function App() {
       setTimeout(() => {
         const winner = determineWinner(userChoice, computerChoice);
         setResult(winner); // Set the result
-        console.log(`Player chose: ${userChoice}`);
-        console.log(`Computer chose: ${computerChoice}`);
-        console.log(`Winner: ${winner}`);
-      }, 2000);
+
+        // Update scores based on the result
+        if (winner === "YOU WIN") {
+          setPlayerScore(playerScore + 1);
+        } else if (winner === "YOU LOSE") {
+          setPlayerScore(playerScore - 1);
+        }
+        // console.log(`Player chose: ${userChoice}`);
+        // console.log(`Computer chose: ${computerChoice}`);
+        // console.log(`Winner: ${winner}`);
+      }, 1100);
     }, 1000);
   };
 
@@ -76,7 +84,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
+      <Header playerScore={playerScore} />
       {showMain && <Main onClick={handleClick} />}
       {showSection && (
         <Section

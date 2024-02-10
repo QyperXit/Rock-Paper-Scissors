@@ -1,7 +1,7 @@
 .score-container {
   border: 3px solid var(--header-outline);
   border-radius: 15px;
-  width: min(100% - 1rem, 50em);
+  width: min(100% - 3.5rem, 50em);
   margin-inline: auto;
   padding: 1em 1.25em;
   display: flex;
@@ -18,29 +18,34 @@
   color: var(--dark-text);
   background: #fff;
   border-radius: 10px;
-  padding: 0.25rem 3.25rem;
+  /* padding: 0.25rem 3.25rem; */
+  padding-block: 0.6rem;
+  padding-inline: min(6vw, 3.25rem);
 }
 .score_title {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   letter-spacing: 2px;
   font-family: var(--font-family);
   width: fit-content;
   color: var(--score-text);
   /* line-height: 1rem; */
   margin-top: 0.5rem;
+  font-size: min(4vw, 1rem);
 }
 
 .score_number {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: var(--font-weight-700);
   width: fit-content;
   height: fit-content;
-
+  font-size: min(12vw, 4rem);
   /* margin-top: -0.65rem; */
 }
 
 .title_names {
-  font-size: 2.4rem;
-  line-height: 1.95rem;
+  /* font-size: 2.4rem; */
+  /* line-height: 1.95rem; */
   font-weight: var(--font-weight-700);
+  font-size: min(7vw, 2.4rem);
+  line-height: min(5.25vw, 1.95rem);
 }
