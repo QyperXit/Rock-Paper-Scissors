@@ -18,6 +18,7 @@ main {
   background-position: center;
   background-size: 325px;
   /* background-position-y: 155%; */
+  z-index: 0;
 }
 
 .hand,
