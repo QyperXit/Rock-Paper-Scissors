@@ -52,8 +52,8 @@ section {
 .result_box {
   text-align: center;
   font-family: var(--font-family);
-  font-size: 1.85rem;
-  margin-top: 7em;
+  font-size: 2.6rem;
+  margin-top: 4em;
   margin-inline: 2em;
   translate: 30px;
 }
@@ -61,7 +61,7 @@ section {
 .play_again {
   border: none;
   font-family: var(--font-family);
-  font-size: 0.85rem;
+  font-size: 1.7rem;
   letter-spacing: 0.2rem;
   padding: 0.5rem 2.2rem;
   border-radius: 5px;

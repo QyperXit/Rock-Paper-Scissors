@@ -170,3 +170,45 @@ main {
   font-size: 1.2rem;
   cursor: pointer;
 }
+
+.modal {
+  width: 100%;
+}
+
+@media (max-width: 515px) {
+  .modal {
+    width: 100%;
+  }
+
+  .modal_box {
+    /* width: 5em; */
+    top: 50%;
+    /* left: 20%; */
+    margin-inline: auto;
+    scale: 1;
+    border: 2em solid #fff;
+    border-radius: 0.5em;
+    border-top-width: 1.5rem;
+    padding-block: 4em;
+    padding-bottom: 6em;
+    translate: 0 -190px;
+  }
+
+  .rules_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    font-family: var(--font-family);
+    font-size: 1.5em;
+    color: var(--dark-text);
+    padding-bottom: ;
+  }
+
+  .fa-xmark {
+    /* display: none; */
+    position: absolute;
+    bottom: 5%;
+    scale: 1.5;
+  }
+}
