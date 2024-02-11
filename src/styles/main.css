@@ -16,7 +16,7 @@ main {
   background-image: url("/home/qyper/Desktop/Nobara-VsCode/FrontEnd-Mentor/Rock-Paper-Scissors/src/assets/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 270px;
+  background-size: 325px;
   /* background-position-y: 155%; */
 }
 
@@ -27,7 +27,7 @@ main {
   /* padding: 3em 3.5em; */
   /* padding-block: min(5vw, 2em);
   padding-inline: min(5vw, 2.5em); */
-  padding: min(5vw, 2em);
+  /* padding: min(1vw, 2em); */
   border-radius: 50%;
   display: flex;
   position: relative;
@@ -105,7 +105,8 @@ main {
 
 .rock img {
   /* height: fit-content; */
-  width: 3.5rem;
+  /* width: 3.5rem; */
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +115,7 @@ main {
 }
 .hand img {
   /* height: fit-content; */
-  width: 3.5rem;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,10 +124,22 @@ main {
 }
 .scissor img {
   /* height: fit-content; */
-  width: 3.5rem;
+  width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-block: 0.5em;
   margin-inline: 0.5em;
+}
+
+/* .scissor img,
+.hand img,
+.rock img {
+  padding: 3em em;
+} */
+
+@media (max-width: 880px) {
+  .group_icons {
+    background-size: 260px;
+  }
 }

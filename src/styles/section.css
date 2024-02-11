@@ -8,8 +8,9 @@ section {
 
 .house_pick {
   display: flex;
-  gap: 10em;
+  /* gap: 10em; */
   /* border: 2px solid red; */
+  gap: 4em;
 }
 
 .user_title,
@@ -17,10 +18,13 @@ section {
   font-family: var(--font-family);
   font-size: 1.45rem;
   letter-spacing: 0.25rem;
+  text-align: center;
 }
 
 .user_choice {
   margin-top: 4em;
+  display: flex;
+  flex-direction: column;
 }
 
 .computer_choice {
@@ -28,14 +32,21 @@ section {
 }
 
 .user_icons {
-  transform: translateY(100px);
-  max-width: 160px;
+  /* transform: translateY(100px); */
+  /* max-width: 160px; */
+  height: fit-content;
+  height: fit-content;
+  margin-inline: auto;
+  margin-top: 3.5em;
 }
 
 .computer_icons {
-  transform: translate(40px, 100px);
-  max-width: 160px;
+  /* transform: translate(40px, 100px); */
+  /* max-width: 160px; */
   height: fit-content;
+  height: fit-content;
+  margin-inline: auto;
+  margin-top: 3.5em;
 }
 
 .result_box {
@@ -43,6 +54,8 @@ section {
   font-family: var(--font-family);
   font-size: 1.85rem;
   margin-top: 7em;
+  margin-inline: 2em;
+  translate: 30px;
 }
 
 .play_again {
@@ -62,26 +75,31 @@ section {
 }
 
 .blank {
-  padding: 5em;
+  padding: 3.5em;
   border-radius: 50%;
   display: flex;
   /* position: absolute; */
   background: hsl(224, 53%, 17%);
-  transform: translate(0px, -7px);
+  /* transform: translate(0px, -7px); */
   /* display: none; */
+  margin-top: 2em;
 }
 
 .rules {
-  /* display: none; */
+  display: flex;
   /* position: absolute; */
   /* bottom: -75px; */
   /* right: 0px; */
+
   background: none;
   border: 3px solid var(--header-outline);
   color: #fff;
   padding: 0.5rem 2.5rem;
   border-radius: 8px;
   /* margin-right: 30px; */
+  margin-left: auto;
+  /* margin-right: auto; */
+  margin-top: 7em;
 }
 
 @media (max-width: 880px) {
@@ -97,27 +115,52 @@ section {
     grid-template-areas:
       "top-left top-right"
       "middle   middle   ";
-    row-gap: 10em;
+    row-gap: 6em;
   }
 
   .computer_choice {
     grid-area: top-right;
     margin-left: 0rem;
     translate: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4em;
+    translate: -4px;
   }
 
   .user_choice {
     grid-area: top-left;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4em;
   }
 
   .result_box {
     grid-area: middle;
     margin-top: 0;
     font-size: 2.75rem;
+    margin-inline: 0em;
+    translate: 0px;
   }
 
   .play_again {
     font-size: 1.2rem;
     padding: 0.8rem 4.2rem;
+  }
+
+  .user_title,
+  .computer_title {
+    font-family: var(--font-family);
+
+    font-size: min(4vw, 1.45rem);
+    letter-spacing: 0.25rem;
+  }
+
+  .rules {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
+    margin-top: min(15vw, 7em);
   }
 }
