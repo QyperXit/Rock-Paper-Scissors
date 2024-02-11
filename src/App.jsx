@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
+import Modal from "./Components/Modal";
 import Rules from "./Components/Rules";
 import Section from "./Components/Section";
 
@@ -12,6 +13,7 @@ function App() {
   const [result, setResult] = useState(null);
   const [computerChoice, setComputerChoice] = useState(""); // Add state for computerChoice
   const [playerScore, setPlayerScore] = useState(12);
+  const [showModal, setShowModal] = useState(false);
 
   const handleClick = (choice) => {
     setShowMain(false); // Hide the Main component
@@ -82,6 +84,11 @@ function App() {
     setComputerChoice(""); // Assuming computerChoice is a string
   };
 
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    // console.log("yes");
+  };
+
   return (
     <div className="container">
       <Header playerScore={playerScore} />
@@ -95,7 +102,8 @@ function App() {
         />
       )}
       {/* <Section /> */}
-      <Rules />
+      {showModal && <Modal onClick={handleShowModal} />}
+      <Rules onClick={handleShowModal} />
     </div>
   );
 }

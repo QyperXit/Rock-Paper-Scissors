@@ -133,14 +133,40 @@ main {
   margin-inline: 0.5em;
 }
 
-/* .scissor img,
-.hand img,
-.rock img {
-  padding: 3em em;
-} */
-
 @media (max-width: 880px) {
   .group_icons {
     background-size: 260px;
   }
+}
+
+/* modal */
+
+.modal_box {
+  /* width: 5em; */
+  top: 50%;
+  /* left: 20%; */
+  margin-inline: auto;
+  scale: 1.35;
+  border: 2em solid #fff;
+  border-radius: 0.5em;
+  border-top-width: 1.5rem;
+}
+
+.modal_box::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+.rules_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-family: var(--font-family);
+  color: var(--dark-text);
+}
+
+.fa-xmark {
+  color: grey;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

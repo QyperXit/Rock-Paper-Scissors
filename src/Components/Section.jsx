@@ -4,6 +4,7 @@ import "../styles/scoring.css";
 import "../styles/section.css";
 import Blank from "./Blank.jsx";
 import Hand from "./Hand.jsx";
+
 import Rock from "./Rock.jsx";
 import Rules from "./Rules.jsx";
 import Scissors from "./Scissors.jsx";
@@ -58,6 +59,7 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
           </div>
         </div>
       </div>
+
       {/* <Rules /> */}
     </section>
   );
