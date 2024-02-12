@@ -135,3 +135,44 @@ main {
   flex-direction: column;
   translate: 25px;
 }
+
+/* bottom shadow */
+
+.hand::after {
+  content: "";
+  position: absolute;
+  top: -16%;
+  left: -16%;
+  right: -16%;
+  bottom: -16%;
+  border-radius: 50%;
+
+  z-index: -1;
+  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.rock::after {
+  content: "";
+  position: absolute;
+  top: -16%;
+  left: -16%;
+  right: -16%;
+  bottom: -16%;
+  border-radius: 50%;
+
+  z-index: -1;
+  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.scissor::after {
+  content: "";
+  position: absolute;
+  top: -16%;
+  left: -16%;
+  right: -16%;
+  bottom: -16%;
+  border-radius: 50%;
+
+  z-index: -1;
+  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+}
