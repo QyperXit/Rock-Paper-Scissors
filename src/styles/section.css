@@ -100,7 +100,7 @@ section {
 @media (max-width: 880px) {
   .house_pick {
     display: grid;
-    gap: 0;
+    gap: 1.5rem;
     /* border: 2px solid red; */
 
     grid-template-columns: 1fr 1fr;
@@ -148,7 +148,7 @@ section {
     font-family: var(--font-family);
 
     font-size: min(4vw, 1.45rem);
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
   }
 
   .rules {

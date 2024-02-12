@@ -127,7 +127,9 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
-      <Rules onClick={handleShowModal} />
+      <motion.div whileHover={{ opacity: 0.8 }} whileTap={{ y: 3 }}>
+        <Rules onClick={handleShowModal} />
+      </motion.div>
     </div>
   );
 }
