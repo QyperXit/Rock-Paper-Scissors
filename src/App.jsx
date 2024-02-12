@@ -95,24 +95,24 @@ function App() {
     <div className="container">
       <Header playerScore={playerScore} />
       {showMain && <Main onClick={handleClick} />}
-      <AnimatePresence>
-        {showSection && (
-          <motion.div
-            key="section" // Unique key for each instance of Section
-            initial={{ opacity: 0 }} // Initial animation properties
-            animate={{ opacity: 1 }} // Animation properties when appearing
-            exit={{ opacity: 0 }} // Animation properties when exiting
-            transition={{ duration: 0.3 }} // Transition properties
-          >
-            <Section
-              playerChoice={playerChoice}
-              result={result}
-              computerChoice={computerChoice}
-              resetGame={resetGame}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* <AnimatePresence> */}
+      {showSection && (
+        <motion.div
+          key="section" // Unique key for each instance of Section
+          initial={{ opacity: 0, y: -50 }} // Initial animation properties (move up)
+          animate={{ opacity: 1, y: 0 }} // Animation properties when appearing
+          exit={{ opacity: 0, visibility: "hidden" }} // Animation properties when exiting (move up)
+          transition={{ duration: 0.3, exit: { duration: -1 } }} // Transition properties
+        >
+          <Section
+            playerChoice={playerChoice}
+            result={result}
+            computerChoice={computerChoice}
+            resetGame={resetGame}
+          />
+        </motion.div>
+      )}
+      {/* </AnimatePresence> */}
 
       <AnimatePresence>
         {showModal && (
@@ -120,7 +120,7 @@ function App() {
             key="modal" // Unique key for each instance of Modal
             initial={{ opacity: 0 }} // Initial animation properties
             animate={{ opacity: 1 }} // Animation properties when appearing
-            exit={{ opacity: 0 }} // Animation properties when exiting
+            exit={{ opacity: 0, visibility: "hidden" }} // Animation properties when exiting
             transition={{ duration: 0.3 }} // Transition properties
           >
             <Modal onClick={handleShowModal} /> {/* Render Modal component */}
