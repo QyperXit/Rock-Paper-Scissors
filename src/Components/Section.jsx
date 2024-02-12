@@ -1,4 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
+
 import { iconPaper, iconRock, iconScissors } from "../assets/index.js";
 import "../styles/scoring.css";
 import "../styles/section.css";
@@ -18,7 +20,17 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
   };
 
   return (
-    <section>
+    <motion.section
+      initial={{
+        // rotate: "0deg",
+        opacity: 0,
+      }}
+      animate={{
+        // rotate: "360deg",
+        opacity: 1,
+      }}
+      transition={{ duration: 0.5, ease: "backInOut" }}
+    >
       <div className="house_pick">
         <div className="user_choice">
           <h4 className="user_title">YOU PICKED</h4>
@@ -59,9 +71,8 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
           </div>
         </div>
       </div>
-
       {/* <Rules /> */}
-    </section>
+    </motion.section>
   );
 };
 

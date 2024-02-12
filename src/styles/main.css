@@ -111,8 +111,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-block: 0.5em;
-  margin-inline: 0.5em;
+  margin-block: 0.8em;
+  margin-inline: 0.8em;
 }
 .hand img {
   /* height: fit-content; */
