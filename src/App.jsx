@@ -95,15 +95,25 @@ function App() {
     <div className="container">
       <Header playerScore={playerScore} />
       {showMain && <Main onClick={handleClick} />}
-      {showSection && (
-        <Section
-          playerChoice={playerChoice}
-          result={result}
-          computerChoice={computerChoice}
-          resetGame={resetGame}
-        />
-      )}
-      {/* <Section /> */}
+      <AnimatePresence>
+        {showSection && (
+          <motion.div
+            key="section" // Unique key for each instance of Section
+            initial={{ opacity: 0 }} // Initial animation properties
+            animate={{ opacity: 1 }} // Animation properties when appearing
+            exit={{ opacity: 0 }} // Animation properties when exiting
+            transition={{ duration: 0.3 }} // Transition properties
+          >
+            <Section
+              playerChoice={playerChoice}
+              result={result}
+              computerChoice={computerChoice}
+              resetGame={resetGame}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <AnimatePresence>
         {showModal && (
           <motion.div
