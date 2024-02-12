@@ -40,6 +40,9 @@ const Main = ({ onClick }) => {
           name="paper"
           onClick={onClick}
           variants={item}
+          whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.5 }}
         >
           <img src={iconPaper} alt="hand icon" name="paper" />
         </motion.div>
@@ -48,6 +51,9 @@ const Main = ({ onClick }) => {
           name="scissors"
           onClick={onClick}
           variants={item}
+          whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.5 }}
         >
           <img src={iconScissors} alt=" scisscor icon" name="scissors" />
         </motion.div>
@@ -56,6 +62,9 @@ const Main = ({ onClick }) => {
           name="rock"
           onClick={onClick}
           variants={item}
+          whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.5 }}
         >
           <img src={iconRock} alt=" rock icon" name="rock" />
         </motion.div>

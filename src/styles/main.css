@@ -33,6 +33,7 @@ main {
   display: flex;
   position: relative;
   background: #fff;
+  cursor: pointer;
 }
 
 .hand {

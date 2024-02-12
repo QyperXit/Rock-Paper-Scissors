@@ -148,7 +148,7 @@ main {
   border-radius: 50%;
 
   z-index: -1;
-  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px -8px 1px 1px hsl(233, 57%, 50%);
 }
 
 .rock::after {
@@ -161,7 +161,7 @@ main {
   border-radius: 50%;
 
   z-index: -1;
-  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px -8px 1px 1px hsl(349, 64%, 36%);
 }
 
 .scissor::after {
@@ -174,7 +174,7 @@ main {
   border-radius: 50%;
 
   z-index: -1;
-  box-shadow: inset 0px -8px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0px -8px 1px 1px rgba(162, 104, 29, 0.833);
 }
 
 @media (max-width: 880px) {
