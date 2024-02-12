@@ -20,17 +20,7 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
   };
 
   return (
-    <motion.section
-      initial={{
-        // rotate: "0deg",
-        opacity: 0,
-      }}
-      animate={{
-        // rotate: "360deg",
-        opacity: 1,
-      }}
-      transition={{ duration: 0.5, ease: "backInOut" }}
-    >
+    <section>
       <div className="house_pick">
         <div className="user_choice">
           <h4 className="user_title">YOU PICKED</h4>
@@ -45,18 +35,33 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
           </div>
         </div>
         {result && (
-          <div className="result_box">
+          <motion.div
+            className="result_box"
+            animate={{ scale: 1, y: 0 }}
+            initial={{ scale: 0, y: -500 }}
+          >
             <h1 className="result" value="Incoming">
               {result}
             </h1>
             <button className="play_again" onClick={handlePlayAgain}>
               PLAY AGAIN
             </button>
-          </div>
+          </motion.div>
         )}
         <div className="computer_choice">
           <h4 className="computer_title">THE HOUSE PICKED</h4>
-          <div className="computer_icons">
+          <motion.div
+            className="computer_icons"
+            initial={{ scale: 0 }}
+            animate={{ rotate: 360, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              duration: 2,
+              delay: 0.65,
+            }}
+          >
             {computerChoice ? (
               computerChoice === "rock" ? (
                 <Rock />
@@ -68,11 +73,11 @@ const Section = ({ playerChoice, result, computerChoice, resetGame }) => {
             ) : (
               <Blank />
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* <Rules /> */}
-    </motion.section>
+    </section>
   );
 };
 

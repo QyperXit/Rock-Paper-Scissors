@@ -42,8 +42,8 @@ function App() {
         // console.log(`Player chose: ${userChoice}`);
         // console.log(`Computer chose: ${computerChoice}`);
         // console.log(`Winner: ${winner}`);
-      }, 1100);
-    }, 1000);
+      }, 900);
+    }, 800);
   };
 
   const generateComputerChoice = () => {
