@@ -1,4 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
+
 import "./App.css";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
@@ -102,7 +104,19 @@ function App() {
         />
       )}
       {/* <Section /> */}
-      {showModal && <Modal onClick={handleShowModal} />}
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            key="modal" // Unique key for each instance of Modal
+            initial={{ opacity: 0 }} // Initial animation properties
+            animate={{ opacity: 1 }} // Animation properties when appearing
+            exit={{ opacity: 0 }} // Animation properties when exiting
+            transition={{ duration: 0.3 }} // Transition properties
+          >
+            <Modal onClick={handleShowModal} /> {/* Render Modal component */}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <Rules onClick={handleShowModal} />
     </div>
   );
