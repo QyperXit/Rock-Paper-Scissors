@@ -21,7 +21,7 @@ const item = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.25, // Adjust the duration as needed
+      duration: 0.35, // Adjust the duration as needed
     },
   },
 };
