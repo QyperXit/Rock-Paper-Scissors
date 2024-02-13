@@ -21,7 +21,7 @@ const item = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.45, // Adjust the duration as needed
+      duration: 0.25, // Adjust the duration as needed
     },
   },
 };
@@ -42,7 +42,7 @@ const Main = ({ onClick }) => {
           variants={item}
           whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <img src={iconPaper} alt="hand icon" name="paper" />
         </motion.div>
@@ -53,7 +53,7 @@ const Main = ({ onClick }) => {
           variants={item}
           whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <img src={iconScissors} alt=" scisscor icon" name="scissors" />
         </motion.div>
@@ -64,7 +64,7 @@ const Main = ({ onClick }) => {
           variants={item}
           whileHover={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1] }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           <img src={iconRock} alt=" rock icon" name="rock" />
         </motion.div>

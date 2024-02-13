@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Link](https://www.frontendmentor.io/solutions/rockpaperscissorsreactjsframer-motion-KxQ-wvYme5)
 - Live Site URL: [Link](https://rockpaperscissors-rps.netlify.app/)
 
 ## My process
