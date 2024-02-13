@@ -6,14 +6,14 @@ main {
 }
 
 .group_icons {
-  margin-top: 5em;
+  margin-top: 6.5em;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr auto 1fr;
   grid-column-gap: 5px;
   grid-row-gap: 80px;
   justify-content: center; /* Added for centering */
-  background-image: url("/home/qyper/Desktop/Nobara-VsCode/FrontEnd-Mentor/Rock-Paper-Scissors/src/assets/bg-triangle.svg");
+  background-image: url("/src/assets/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 325px;

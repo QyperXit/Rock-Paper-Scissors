@@ -121,7 +121,7 @@ function App() {
             initial={{ opacity: 0 }} // Initial animation properties
             animate={{ opacity: 1 }} // Animation properties when appearing
             exit={{ opacity: 0, visibility: "hidden" }} // Animation properties when exiting
-            transition={{ duration: 0.3 }} // Transition properties
+            transition={{ duration: 0.2 }} // Transition properties
           >
             <Modal onClick={handleShowModal} /> {/* Render Modal component */}
           </motion.div>

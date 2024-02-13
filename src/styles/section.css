@@ -11,6 +11,7 @@ section {
   /* gap: 10em; */
   /* border: 2px solid red; */
   gap: 4em;
+  margin-top: 1em;
 }
 
 .user_title,
