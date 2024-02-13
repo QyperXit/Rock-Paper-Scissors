@@ -1,15 +1,13 @@
 section {
   display: flex;
   justify-content: center;
-  /* border: 2px solid red; */
-  /* flex-wrap: wrap; */
+
   align-items: center;
 }
 
 .house_pick {
   display: flex;
-  /* gap: 10em; */
-  /* border: 2px solid red; */
+
   gap: 4em;
   margin-top: 1em;
 }
@@ -102,12 +100,10 @@ section {
   .house_pick {
     display: grid;
     gap: 1.5rem;
-    /* border: 2px solid red; */
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    /* gap: 133px; */
-    /* row-gap: 0.5rem; */
+
     grid-template-areas:
       "top-left top-right"
       "middle   middle   ";

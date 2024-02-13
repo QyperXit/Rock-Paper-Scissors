@@ -128,9 +128,9 @@ function App() {
         )}
       </AnimatePresence>
       <motion.div
-        whileHover={{ opacity: 0.15, ease: "anticipate" }}
+        whileHover={{ opacity: 0.15, ease: "backOut" }}
         whileTap={{ x: 3 }}
-        exit={{ opacity: 0 }}
+        exit={{ opacity: 0, scale: 0 }}
       >
         <Rules onClick={handleShowModal} />
       </motion.div>
